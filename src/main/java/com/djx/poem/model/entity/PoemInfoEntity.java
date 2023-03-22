@@ -1,4 +1,4 @@
-package com.djx.poem.model;
+package com.djx.poem.model.entity;
 
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 /** 
  * @author hhyy
- * @date 2023-03-21 23:11:04
+ * @date 2023-03-22 14:07:17
 **/
 @Data
 @Entity

@@ -1,4 +1,4 @@
-package com.djx.poem.model;
+package com.djx.poem.model.entity;
 
 import lombok.Data;
 
@@ -10,12 +10,12 @@ import java.math.BigDecimal;
 
 /** 
  * @author hhyy
- * @date 2023-03-21 23:11:04
+ * @date 2023-03-22 14:07:17
 **/
 @Data
 @Entity
-@Table(name = "poem_tag_relation")
-public class PoemTagRelationEntity implements Serializable {
+@Table(name = "poem_tag")
+public class PoemTagEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,16 +23,22 @@ public class PoemTagRelationEntity implements Serializable {
 	private Integer id;
 
 	/** 
-	 * 诗词id
+	 * 诗词标签
 	**/
-    @Column(name = "poem_id", columnDefinition = "int")
-	private Integer poemId;
+    @Column(name = "tag", columnDefinition = "varchar")
+	private String tag;
 
 	/** 
-	 * 标签id
+	 * 标签描述
 	**/
-    @Column(name = "tag_id", columnDefinition = "int")
-	private Integer tagId;
+    @Column(name = "tag_desc", columnDefinition = "varchar")
+	private String tagDesc;
+
+	/** 
+	 * 状态：0-默认
+	**/
+    @Column(name = "status", columnDefinition = "tinyint")
+	private Integer status;
 
 	/** 
 	 * 创建时间
