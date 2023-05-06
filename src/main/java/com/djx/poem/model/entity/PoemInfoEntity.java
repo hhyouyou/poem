@@ -5,105 +5,104 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.math.BigDecimal;
 
 
-/** 
+/**
  * @author hhyy
- * @date 2023-03-22 14:07:17
-**/
+ * @date 2023-05-06 18:41:03
+ **/
 @Data
 @Entity
 @Table(name = "poem_info")
 public class PoemInfoEntity implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", columnDefinition = "int unsigned")
-	private Integer id;
+    private Integer id;
 
-	/** 
-	 * ±êÌâ
-	**/
+    /**
+     * æ ‡é¢˜
+     **/
     @Column(name = "title", columnDefinition = "varchar")
-	private String title;
+    private String title;
 
-	/** 
-	 * ×÷Õß
-	**/
+    /**
+     * ä½œè€…
+     **/
     @Column(name = "author", columnDefinition = "varchar")
-	private String author;
+    private String author;
 
-	/** 
-	 * ³¯´ú
-	**/
+    /**
+     * æœä»£
+     **/
     @Column(name = "dynasty", columnDefinition = "varchar")
-	private String dynasty;
+    private String dynasty;
 
-	/** 
-	 * Ê«´ÊÄÚÈİ
-	**/
+    /**
+     * è¯—è¯å†…å®¹
+     **/
     @Column(name = "content", columnDefinition = "text")
-	private String content;
+    private String content;
 
-	/** 
-	 * ·­Òë
-	**/
+    /**
+     * ç¿»è¯‘
+     **/
     @Column(name = "translate", columnDefinition = "text")
-	private String translate;
+    private String translate;
 
-	/** 
-	 * ×¢ÊÍ
-	**/
+    /**
+     * æ³¨é‡Š
+     **/
     @Column(name = "annotation", columnDefinition = "text")
-	private String annotation;
+    private String annotation;
 
-	/** 
-	 * ÉÍÎö
-	**/
+    /**
+     * èµæ
+     **/
     @Column(name = "appreciate", columnDefinition = "text")
-	private String appreciate;
+    private String appreciate;
 
-	/** 
-	 * ²Î¿¼
-	**/
+    /**
+     * å‚è€ƒ
+     **/
     @Column(name = "reference", columnDefinition = "text")
-	private String reference;
+    private String reference;
 
-	/** 
-	 * ÀàĞÍ£ºÊ«/´Ê/Çú
-	**/
-    @Column(name = "type", columnDefinition = "varchar")
-	private String type;
+    /**
+     * ç±»å‹ï¼šè¯—/è¯/æ›²
+     **/
+    @Column(name = "type", columnDefinition = "text")
+    private String type;
 
-	/** 
-	 * ×´Ì¬£º0-Ä¬ÈÏ;1-Ğ£¶Ô
-	**/
+    /**
+     * çŠ¶æ€ï¼š0-é»˜è®¤;1-æ ¡å¯¹
+     **/
     @Column(name = "status", columnDefinition = "tinyint")
-	private Integer status;
+    private Integer status;
 
-	/** 
-	 * ´´½¨Ê±¼ä
-	**/
+    /**
+     * åˆ›å»ºæ—¶é—´
+     **/
     @Column(name = "created_at", columnDefinition = "timestamp")
-	private LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
-	/** 
-	 * ×îºó¸üĞÂÊ±¼ä
-	**/
+    /**
+     * æœ€åæ›´æ–°æ—¶é—´
+     **/
     @Column(name = "last_updated_at", columnDefinition = "timestamp")
-	private LocalDateTime lastUpdatedAt;
+    private LocalDateTime lastUpdatedAt;
 
-	/** 
-	 * ´´½¨ÈË
-	**/
+    /**
+     * åˆ›å»ºäºº
+     **/
     @Column(name = "created_by", columnDefinition = "int")
-	private Integer createdBy;
+    private Integer createdBy;
 
-	/** 
-	 * ×îºó¸üĞÂÈË
-	**/
+    /**
+     * æœ€åæ›´æ–°äºº
+     **/
     @Column(name = "last_updated_by", columnDefinition = "int")
-	private Integer lastUpdatedBy;
+    private Integer lastUpdatedBy;
 
 }

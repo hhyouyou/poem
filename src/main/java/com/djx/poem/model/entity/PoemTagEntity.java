@@ -5,63 +5,62 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.math.BigDecimal;
 
 
-/** 
+/**
  * @author hhyy
- * @date 2023-03-22 14:07:17
-**/
+ * @date 2023-05-06 18:41:52
+ **/
 @Data
 @Entity
 @Table(name = "poem_tag")
 public class PoemTagEntity implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", columnDefinition = "int unsigned")
-	private Integer id;
+    private Integer id;
 
-	/** 
-	 * Ê«´Ê±êÇ©
-	**/
+    /**
+     * è¯—è¯æ ‡ç­¾
+     **/
     @Column(name = "tag", columnDefinition = "varchar")
-	private String tag;
+    private String tag;
 
-	/** 
-	 * ±êÇ©ÃèÊö
-	**/
+    /**
+     * æ ‡ç­¾æè¿°
+     **/
     @Column(name = "tag_desc", columnDefinition = "varchar")
-	private String tagDesc;
+    private String tagDesc;
 
-	/** 
-	 * ×´Ì¬£º0-Ä¬ÈÏ
-	**/
+    /**
+     * çŠ¶æ€ï¼š0-é»˜è®¤
+     **/
     @Column(name = "status", columnDefinition = "tinyint")
-	private Integer status;
+    private Integer status;
 
-	/** 
-	 * ´´½¨Ê±¼ä
-	**/
+    /**
+     * åˆ›å»ºæ—¶é—´
+     **/
     @Column(name = "created_at", columnDefinition = "timestamp")
-	private LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
-	/** 
-	 * ×îºó¸üĞÂÊ±¼ä
-	**/
+    /**
+     * æœ€åæ›´æ–°æ—¶é—´
+     **/
     @Column(name = "last_updated_at", columnDefinition = "timestamp")
-	private LocalDateTime lastUpdatedAt;
+    private LocalDateTime lastUpdatedAt;
 
-	/** 
-	 * ´´½¨ÈË
-	**/
+    /**
+     * åˆ›å»ºäºº
+     **/
     @Column(name = "created_by", columnDefinition = "int")
-	private Integer createdBy;
+    private Integer createdBy;
 
-	/** 
-	 * ×îºó¸üĞÂÈË
-	**/
+    /**
+     * æœ€åæ›´æ–°äºº
+     **/
     @Column(name = "last_updated_by", columnDefinition = "int")
-	private Integer lastUpdatedBy;
+    private Integer lastUpdatedBy;
 
 }

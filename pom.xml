@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.9</version>
+        <version>2.7.11</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.djx</groupId>
@@ -16,8 +16,24 @@
     <properties>
         <java.version>8</java.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
-        <easyexcel.version>2.1.4</easyexcel.version>
+        <easyexcel.version>3.3.0</easyexcel.version>
+
+        <hutool.version>5.8.16</hutool.version>
     </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <!-- 注意这里是import -->
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -57,12 +73,11 @@
         </dependency>
 
 
-<!--        <dependency>-->
-<!--            <groupId>org.hibernate.search</groupId>-->
-<!--            <artifactId>hibernate-search-mapper-orm-orm6</artifactId>-->
-<!--            <version>6.1.7.Final</version>-->
-<!--        </dependency>-->
-
+        <!--        <dependency>-->
+        <!--            <groupId>org.hibernate.search</groupId>-->
+        <!--            <artifactId>hibernate-search-mapper-orm-orm6</artifactId>-->
+        <!--            <version>6.1.7.Final</version>-->
+        <!--        </dependency>-->
 
 
         <!-- 工具类 -->
@@ -77,7 +92,28 @@
             <artifactId>easyexcel</artifactId>
             <version>${easyexcel.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
 
+
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-json</artifactId>
+        </dependency>
 
 
     </dependencies>

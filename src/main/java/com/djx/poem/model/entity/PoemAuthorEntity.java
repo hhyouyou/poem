@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 /**
  * @author hhyy
- * @date 2023-03-22 14:07:17
+ * @date 2023-05-06 18:41:52
  **/
 @Data
 @Entity
@@ -22,43 +22,43 @@ public class PoemAuthorEntity implements Serializable {
     private Integer id;
 
     /**
-     * Ãû³Æ
+     * åç§°
      **/
     @Column(name = "name", columnDefinition = "varchar")
     private String name;
 
     /**
-     * ×÷ÕßÃèÊö
+     * ä½œè€…æè¿°
      **/
     @Column(name = "author_desc", columnDefinition = "varchar")
     private String authorDesc;
 
     /**
-     * ³¯´ú
+     * æœä»£
      **/
     @Column(name = "dynasty", columnDefinition = "varchar")
     private String dynasty;
 
     /**
-     * ´´½¨Ê±¼ä
+     * åˆ›å»ºæ—¶é—´
      **/
     @Column(name = "created_at", columnDefinition = "timestamp")
     private LocalDateTime createdAt;
 
     /**
-     * ×îºó¸üĞÂÊ±¼ä
+     * æœ€åæ›´æ–°æ—¶é—´
      **/
     @Column(name = "last_updated_at", columnDefinition = "timestamp")
     private LocalDateTime lastUpdatedAt;
 
     /**
-     * ´´½¨ÈË
+     * åˆ›å»ºäºº
      **/
     @Column(name = "created_by", columnDefinition = "int")
     private Integer createdBy;
 
     /**
-     * ×îºó¸üĞÂÈË
+     * æœ€åæ›´æ–°äºº
      **/
     @Column(name = "last_updated_by", columnDefinition = "int")
     private Integer lastUpdatedBy;
